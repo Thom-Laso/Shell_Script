@@ -1,17 +1,17 @@
 #!/bin/bash
 PI=3.14
-l=5.5
-echo "Length=$l"
-b=3.8
-echo "Breath=$b"
-r=10.5
-echo "Radius=$r"
+echo "Enter length of a rectangle"
+read l
+echo "Enter breath of a rectangle"
+read b
+echo "Enter the radius of a circle"
+read r
 echo
-rarea=`expr "$l * $b" | bc`
+rarea=`echo $l \* $b | bc`
 echo "area_of_rectangle=$rarea"
-perimeter=`expr "2 * $l*$b" | bc`
+perimeter=`expr "2 * $l*$b | bc`
 echo "perimeter_of_rectangle=$perimeter"
-carea=`expr "$PI * $r*$r" | bc`
+carea=`echo $PI \* $r \* $r" | bc`
 echo "Area_of_Circle=$carea"
-ccircum=`expr "2 * $PI * $r" | bc`
+ccircum=`echo 2 \* $PI \* $r | bc`
 echo "Circumference_of_circle=$ccircum"
